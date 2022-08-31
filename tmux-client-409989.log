@@ -1,0 +1,37 @@
+1661786293.788235 client started (409989): version 3.0a, socket /tmp/tmux-1000/default, protocol 8
+1661786293.788270 on Linux 5.4.0-109-generic #123-Ubuntu SMP Fri Apr 8 09:10:54 UTC 2022; libevent 2.1.11-stable (poll)
+1661786293.788291 socket is /tmp/tmux-1000/default
+1661786293.788308 trying connect
+1661786293.788390 add peer 0x55dcb638a010: 6 ((nil))
+1661786293.788472 sending message 100 to peer 0x55dcb638a010 (4 bytes)
+1661786293.788479 sending message 101 to peer 0x55dcb638a010 (7 bytes)
+1661786293.788483 sending message 102 to peer 0x55dcb638a010 (11 bytes)
+1661786293.788487 sending message 108 to peer 0x55dcb638a010 (16 bytes)
+1661786293.788492 sending message 104 to peer 0x55dcb638a010 (0 bytes)
+1661786293.788496 sending message 107 to peer 0x55dcb638a010 (4 bytes)
+1661786293.788500 sending message 105 to peer 0x55dcb638a010 (16 bytes)
+1661786293.788504 sending message 105 to peer 0x55dcb638a010 (37 bytes)
+1661786293.788507 sending message 105 to peer 0x55dcb638a010 (20 bytes)
+1661786293.788511 sending message 105 to peer 0x55dcb638a010 (12 bytes)
+1661786293.788515 sending message 105 to peer 0x55dcb638a010 (15 bytes)
+1661786293.788518 sending message 105 to peer 0x55dcb638a010 (15 bytes)
+1661786293.788522 sending message 105 to peer 0x55dcb638a010 (1506 bytes)
+1661786293.788530 sending message 105 to peer 0x55dcb638a010 (49 bytes)
+1661786293.788534 sending message 105 to peer 0x55dcb638a010 (34 bytes)
+1661786293.788538 sending message 105 to peer 0x55dcb638a010 (12 bytes)
+1661786293.788541 sending message 105 to peer 0x55dcb638a010 (32 bytes)
+1661786293.788545 sending message 105 to peer 0x55dcb638a010 (9 bytes)
+1661786293.788549 sending message 105 to peer 0x55dcb638a010 (13 bytes)
+1661786293.788552 sending message 105 to peer 0x55dcb638a010 (8 bytes)
+1661786293.788556 sending message 105 to peer 0x55dcb638a010 (34 bytes)
+1661786293.788560 sending message 105 to peer 0x55dcb638a010 (144 bytes)
+1661786293.788564 sending message 105 to peer 0x55dcb638a010 (19 bytes)
+1661786293.788567 sending message 105 to peer 0x55dcb638a010 (17 bytes)
+1661786293.788571 sending message 105 to peer 0x55dcb638a010 (16 bytes)
+1661786293.788575 sending message 106 to peer 0x55dcb638a010 (0 bytes)
+1661786293.788579 sending message 200 to peer 0x55dcb638a010 (4 bytes)
+1661786293.788582 client loop enter
+1661786293.788852 peer 0x55dcb638a010 message 211
+1661786293.788867 client_write: sessions should be nested with care, unset $TMUX to force\n
+1661786293.788884 peer 0x55dcb638a010 message 203
+1661786293.788890 client loop exit

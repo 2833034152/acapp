@@ -1,4 +1,4 @@
-#！/bin/bash
+#! /bin/bash
 
 JS_PATH=/home/acs/acapp/game/static/js/
 JS_PATH_DIST=${JS_PATH}dist/
