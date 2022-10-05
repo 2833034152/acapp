@@ -14,10 +14,15 @@ from channels.db import database_sync_to_async
 
 class MultiPlayer(AsyncWebsocketConsumer):
     async def connect(self):
-        await self.accept()
+        user = self.scope['user']
+        print(user, user.is_authenticated)
+        if user.is_authenticated:
+            await self.accept()
+        else:
+            await self.close()
 
     async def disconnect(self, close_code):
-        if self.room_name:
+        if hasattr(self, 'room_name') and self.room_name:
             await self.channel_layer.group_discard(self.room_name, self.channel_name);
 
 
@@ -82,6 +87,36 @@ class MultiPlayer(AsyncWebsocketConsumer):
         )
 
     async def attack(self, data):
+        if not self.room_name:
+            return
+        players = cache.get(self.room_name)
+
+        if not players:
+            return
+
+        for player in players:
+            if player['uuid'] == data['attackee_uuid']:
+                player['hp'] -= 25
+
+        remain_cnt = 0
+        for player in players:
+            if player['hp'] > 0:
+                remain_cnt += 1
+
+        if remain_cnt > 1:
+            if self.room_name:
+                cache.set(self.room_name, players, 3600)
+        else:
+            def db_update_player_score(username, score):
+                player = Player.objects.get(user__username=username)
+                player.score += score
+                player.save()
+            for player in players:
+                if player['hp'] <= 0:
+                    await database_sync_to_async(db_update_player_score)(player['username'], -5)
+                else:
+                    await database_sync_to_async(db_update_player_score)(player['username'], 10)
+
         await self.channel_layer.group_send(
             self.room_name,
             {
