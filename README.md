@@ -4,7 +4,7 @@
 使用nginx做简单的负载均衡。
 
 ### 游戏功能
-连接对战、聊天、restFramework jwt登录验证、thirft做匹配服务等
+联机对战、聊天、restFramework jwt登录验证、thirft做匹配服务等
 
 ### 网站地址：
 https://app3191.acapp.acwing.com.cn/
