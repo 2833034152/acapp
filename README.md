@@ -6,6 +6,9 @@
 ### 游戏功能
 联机对战、聊天、restFramework jwt登录验证、thirft做匹配服务等
 
+###玩法
+鼠标右键移动；q、f选择技能，鼠标左键释放；Enter键激活聊天框、Esc推出聊天框
+
 ### 网站地址：
 https://app3191.acapp.acwing.com.cn/
 
